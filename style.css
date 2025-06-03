@@ -1,0 +1,1490 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.Container{
+    position: relative;
+    width: 1105px; 
+    height: 731px; 
+    background: #100F13; 
+    border-radius: 36px;
+    margin-top: 5%;
+    overflow: scroll;
+
+}
+
+.Overicon {
+  width: 50px;
+  height: 38px;
+  left: -1px;
+  top: 54px;
+  position: absolute;
+  z-index: 1;
+}
+.Overicon .Rectangle174 {
+  width: 28px;
+  height: 38px;
+  left: 1px;
+  top: 0px;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(230.18, 228.97, 228.97, 0.31) 0%, rgba(86.53, 86.53, 86.53, 0.31) 100%);
+  box-shadow: 1px 1px 1px;
+  filter: blur(1px);
+  backdrop-filter: blur(1px);
+  box-shadow: none;
+}
+.Overicon .Ellipse54 {
+  width: 38px;
+  height: 38px;
+  left: 12px;
+  top: 0px;
+  position: absolute;
+  background: #212925;
+  box-shadow: -16px 1px 4px -15px rgba(0, 0, 0, 0.25);
+  border-radius: 9999px;
+}
+.Sidebar {
+  width: 60px;
+  height: 690px;
+  left: 10px;
+  top: 25px;
+  position: absolute;
+  background: linear-gradient(180deg, #20383E 0%, #5293A3 0%, #476A73 44%, #3D6974 100%);
+  border-radius: 16px;
+}
+.Sidebar a {
+  padding: 6px 8px 20px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  margin-top: 10px;
+  margin-left: -15px;
+  z-index: 11;
+}
+.SidebarIcons {
+  z-index: 11;
+  width: 28.21px;
+  height: 237px;
+  left: 16px;
+  top: 44px;
+  position: absolute;
+}
+.Searchbar .Searchtext input{
+    background-color: #313131;
+    outline: none;
+    border: none;
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 60px;
+    font-size: 20px;
+    color: white;
+}
+.Searchicon{
+  width: 24px; height: 24px; left: 22px; top: 13px; position: absolute; border:none
+}
+.Searchbar .Searchicon svg{
+    color: white;
+
+}
+
+/* f to c */
+.toggle-button-cover {
+    display: table-cell;
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+    margin-top: -50px;
+    margin-left: -75px;
+  }
+  
+  .button-cover {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+  }
+  
+  .button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+  }
+  
+  .button-cover,
+  .knobs,
+  .layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+  }
+  
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .knobs {
+    z-index: 2;
+  }
+  
+  .layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  
+  .button.r,
+  .button.r .layer {
+    border-radius: 100px;
+  }
+  
+  #button-3 .knobs:before {
+    content: "F";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 30px;
+    height: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #2b2b2b;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+  }
+  
+  #button-3 .checkbox:active + .knobs:before {
+    width: 46px;
+    border-radius: 100px;
+  }
+  
+  #button-3 .checkbox:checked:active + .knobs:before {
+    margin-left: -26px;
+  }
+  
+  #button-3 .checkbox:checked + .knobs:before {
+    content: "C";
+    left: 37px;
+    background-color: #f44336;
+    top: -1px;
+  }
+  
+  #button-3 .checkbox:checked ~ .layer {
+    background-color: #fcebeb;
+  }
+
+/* togle button dark mood to light mood */
+.Toggel{
+    width: 43px; height: 21px; left: 18px; top: 684px; position: absolute;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #111;
+  width: 33px;
+  height: 12px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+.checkbox-label svg{
+  margin: 0px 0px 0px 0px;
+  height: 20px;
+  padding: 3px;
+}
+.checkbox-label .svgsun{
+  margin: 0px 0px 0px 4px;
+  height: 20px;
+  padding: 3px;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(19px);
+}
+
+
+/* main container */
+.Main{
+  width: 540px; height: 290px; left: 80px; top: 85px; position: absolute;background: #313131; border-radius: 20px
+}
+.Datas{
+  width: 520px; height: 265px; left: 10px; top: 10px; position: absolute;
+}
+.CityName_back{
+  width: 101.08px; height: 31px; left: 4.86px; top: 0px; position: absolute; background-color: rgb(106, 37, 37); background: #D0E5F3; border-radius: 15.50px; overflow: scroll;
+}
+.Cityname{
+  left: 27px; top: -10px; position: absolute; color: rgb(0, 0, 0); font-size: 15px; font-family: Inter; font-weight: 400; word-wrap: break-word
+}
+.CityName_back svg{
+  height: 18px; position: absolute; left: 8px; top: 5px;
+}
+
+/* main section */
+.Main .Datas .Dayandyear{
+  color: white;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+  position: absolute;
+
+}
+.Main .Datas .Dayandyear h2{
+  margin: -5px 0px 0px 0px;
+  font-size: 34px;
+  
+}
+.Main .Datas .Dayandyear p{
+  margin: 0px 0px 0px 0px;
+  font-size: 16px;
+}
+
+.Main .Datas .Temarature{
+  color: white;
+}
+.Main .Datas .Temarature h1{
+  color: white;
+  font-size: 60px;
+  margin: -9px 0px 0px 0px;
+}
+.Main .Datas .Highandlow{
+  width: 170px; height: 23px; left: 0px; top: 211px; position: absolute;
+}
+.Main .Datas .Highandlow p{
+  color: rgb(241, 241, 241);
+  margin-top: 1px ;
+}
+.Main .Datas .Condition{
+  color: white;
+}
+.Main .Datas .Condition h2{
+  font-size: 30px;
+  margin-top: -5px;
+}
+.Main .Datas .Condition p{
+  font-size: 12px;
+  margin-top: -22px;
+  margin-left: 0px;
+}
+.Main .Datas .Icon img{
+  position: absolute;
+  width: 150px;
+  /* height: 130px; */
+  margin-top: 8px;
+  margin-left: 40px;
+}
+.Main .Datas .Icon{
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  margin-top: 8px;
+  margin-left:0px;
+}
+
+.Main .Datas .rotate-img{
+  width: 50px;
+  position: absolute;
+  margin: 16% 0% 0% 40%;
+  transform: rotate(-20deg);
+}
+.Main .Datas .rotate-img img{
+  width: 40px;
+}
+
+/* additional information */
+.AdditionalInfoBack{
+  width: 540px; height: 330px; left: 80px; top: 385px; position: absolute; background: #313131; border-radius: 20px
+}
+.TodayContainer{
+  width: 520px; height: 300px; left: 10px; top: 20px; position: absolute;
+}
+
+
+.DaysForecast {
+  display: flex;
+  justify-content: space-between;
+  width: 380px; height: 150px; left: 0px; top: 50px; position: absolute; background: linear-gradient(263deg, #313131 9%, #2F6379 46%, #313131 98%);
+  /* border: 2px solid #ff0000 ; */
+  padding-left: 5px;
+  overflow: scroll;
+}
+
+.forecast-day {
+  text-align: center;
+  margin: 9px 3px 0px 4px;
+  padding: 15px;
+  width: 30px; height: 100px; background: rgba(40, 54, 63, 0.74); box-shadow: -11px -8px 18px rgba(104.51, 104.51, 104.51, 0.25) inset; border-radius: 18px; border-left: 1.50px #B7B7B7 solid; border-top: 1.50px #B7B7B7 solid; border-right: 0.40px #B7B7B7 solid; border-bottom: 0.40px #B7B7B7 solid; backdrop-filter: blur(2px);
+}
+
+.date {
+  font-weight: bold;
+  color: white;
+  margin: auto;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 0px 0px 0px -8px;
+}
+
+.temp {
+  font-size: 20px;
+  color: white;
+  margin: 4px 0px 0px -6px;
+}
+
+
+/* sun raise, sut, len */
+.backOFssl{
+  width: 118px; height: 300px; left: 402px; top: 0px; position: absolute; background: linear-gradient(175deg, #333B3F 0%, #376177 44%, #34444C 87%, #333B3F 100%); border-radius: 10px;
+}
+.AdditionalInfoBack .Sunrise{
+  width: 66px; height: 19px; left: 416px; top: 24px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+
+}
+.AdditionalInfoBack .Sunrise p{
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+.AdditionalInfoBack .Sunrise h2{
+  margin: 10px 0px 0px 0px;
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+.time-suffix {
+  font-size: 0.6em; /* Adjust the size as needed */
+  color: inherit;  /* Inherits the color from the parent element */
+  margin-left: 4px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+.AdditionalInfoBack .Sunset{
+  width: 66px; height: 19px; left: 416px; top: 111px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+.AdditionalInfoBack .Sunset p{
+  margin: auto;
+}
+.AdditionalInfoBack .Sunset h2{
+  margin: 10px 0px 0px 0px;
+  font-size: 25px;
+}
+.AdditionalInfoBack .LengthOfDay{
+  width: 77px; height: 18px; left: 417px; top: 208px; position: absolute; color: white; font-size: 16px; font-family: Inter; font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+.AdditionalInfoBack .LengthOfDay p{
+  margin: auto;
+}
+.AdditionalInfoBack .LengthOfDay h2{
+  font-size: 17px;
+  margin-top: 0px;
+}
+
+/* tomorow section */
+.Nextday{
+  width: 390px; height: 60px; left: 0px; top: 240px; position: absolute; background: #4e4e4e; border-radius: 10px;
+}
+.Nextday p{
+  padding: 0;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  margin: 6px;
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+
+}
+.Nextday samp{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  width: 100px;
+  padding: 0;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  margin: 30px 0px 0px 8px;
+  word-wrap: break-word;
+}
+.Nextday h2{
+  padding: 0;
+  font-size: 40px;
+  color: white;
+  position: relative;
+  margin: 3px 0px 0px 108px;
+}
+.CloudIcon{
+  width: 60px; height: 52px; left: 308px; top: 212px; position: absolute;
+}
+.CloudIcon img{
+  width: 60px;
+}
+
+
+
+
+/* other city css */
+.OtherCities{
+  width: 461px; height: 244px; left: 629px; top: 472px; position: absolute;
+  background: rgba(111.36, 153.90, 167.34, 0); border-radius: 20px
+}
+.OtherCityText{
+  width: 120px; height: 27px; left: 0px; top: 0px; position: absolute; ;
+}
+.OtherCityText p{
+  color: white;
+  padding: auto;
+  margin: auto;
+  font-size: 20px;
+}
+.Showall{
+  width: 70px; height: 27px; left: 391px; top: 0px; position: absolute;background: #313131; border-radius: 12px
+}
+.Showall p{
+  color: white;
+  margin: 5px 0px 0px 7px;
+  padding: auto;
+  font-size: 14px;
+}
+.City1{
+  width: 225px; height: 100px; left: 1px; top: 33px; position: absolute; background: #313131; border-radius: 10px
+}
+.City1 h1{
+  color: white;
+  margin: 4px 0px 0px 10px;
+  padding: 0%;
+  font-size: 50px;
+}
+.City1 p{
+  color: rgb(133, 133, 133);
+  margin: -26px 0px 0px 80px;
+  padding: 0%;
+  font-size: 14px;
+}
+.City1 .Icon{
+  width: 53px; height: 40px; left: 166px; top: 54px; position: absolute;
+}
+.City1 .Icon img{
+  width: 53px; top:-14px; position: absolute;
+}
+
+.City2{
+  width: 225px; height: 100px; left: 1px; top: 143px; position: absolute; background: #313131; border-radius: 10px
+}
+.City2 h1{
+  color: white;
+  margin: 4px 0px 0px 10px;
+  padding: 0%;
+  font-size: 50px;
+}
+.City2 p{
+  color: rgb(133, 133, 133);
+  margin: -26px 0px 0px 80px;
+  padding: 0%;
+  font-size: 14px;
+}
+.City2 .Icon{
+  width: 53px; height: 40px; left: 166px; top: 54px; position: absolute;
+}
+.City2 .Icon img{
+  width: 53px; top:-14px; position: absolute;
+}
+.City3{
+  width: 225px; height: 100px; left: 236px; top: 33px; position: absolute; background: #313131; border-radius: 10px
+}
+.City3 h1{
+  color: white;
+  margin: 4px 0px 0px 10px;
+  padding: 0%;
+  font-size: 50px;
+}
+.City3 p{
+  color: rgb(133, 133, 133);
+  margin: -26px 0px 0px 80px;
+  padding: 0%;
+  font-size: 14px;
+}
+.City3 .Icon{
+  width: 53px; height: 40px; left: 166px; top: 54px; position: absolute;
+}
+.City3 .Icon img{
+  width: 53px; top:-14px; position: absolute;
+}
+.City4{
+  width: 225px; height: 100px; left: 236px; top: 143px; position: absolute; background: #313131; border-radius: 10px
+}
+.City4 h1{
+  color: white;
+  margin: 4px 0px 0px 10px;
+  padding: 0%;
+  font-size: 50px;
+}
+.City4 p{
+  color: rgb(133, 133, 133);
+  margin: -26px 0px 0px 80px;
+  padding: 0%;
+  font-size: 14px;
+}
+.City4 .Icon{
+  width: 53px; height: 40px; left: 166px; top: 54px; position: absolute;
+}
+.City4 .Icon img{
+  width: 53px; top:-14px; position: absolute;
+}
+
+/* today highlights */
+.Todayandhigilight{
+  width: 460px; height: 380px; left: 630px; top: 85px; position: absolute;
+  background: linear-gradient(180deg, #273A40 0%, #2E6B7D 65%, #3D6875 100%); border-radius: 20px
+}
+.Todayandhigilight p{
+  color: white;
+  margin: 8px 0px 0px 10px;
+  font-size: 20px;
+}
+.AQI{
+  width: 210px; height: 155px; left: 15px; top: 40px; position: absolute; background: #313131; border-radius: 13px
+}
+.AQI p{
+  font-size: 16px;
+}
+.AQI h1{
+  color: white;
+  font-size: 60px;
+  margin: 8px 0px 0px 86px;
+}
+.AQI h2{
+  color: white;
+  margin: 20px 0px 0px 10px;
+  font-size: 20px;
+}
+.UvRay{
+  width: 210px; height: 155px; left: 235px; top: 40px; position: absolute; background: #313131; border-radius: 13px;
+}
+.UvRay p{
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.Humidity{
+  width: 210px; height: 160px; left: 235px; top: 205px; position: absolute; background: #313131; border-radius: 13px
+}
+.Humidity p{
+  font-size: 16px;
+}
+.Humidity img{
+  width: 100px;
+  margin: 15px 0px 0px 50px;
+}
+.Humidity h2{
+  color: white;
+  margin: -6px 0px 0px 10px;
+  font-size: 22px;
+}
+.Humidity h3{
+  font-size: 11px;
+  color: rgb(82, 219, 82);
+  margin: -28px 0px 0px 140px;
+  word-wrap: none;
+}
+.Humidity h4{
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  margin: 0px 0px 0px 140px;
+}
+.WindSpeed{
+  width: 210px; height: 160px; left: 15px; top: 205px; position: absolute; background: #313131; border-radius: 13px
+}
+.WindSpeed p{
+  font-size: 16px;
+}
+.WindSpeed img{
+  width: 130px;
+  margin: -10px 0px 0px 43px;
+}
+.WindSpeed h2{
+  color: white;
+  margin: -135px 0px 0px 10px;
+  font-size: 20px;
+}
+.WindSpeed h3{
+  font-size: 14px;
+  color: rgb(223, 223, 223);
+  margin: -17px 0px 0px 170px;
+}
+
+/* UV index speed icon */
+
+.gauge-wrapper {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  padding: 20px 15px 15px;
+}
+
+.gauge {
+  background: #e7e7e7;
+  width: 150px;
+  height: 75px;
+  border-radius: 100px 100px 0 0!important;
+  position: relative;
+  overflow: hidden;
+  margin: 0px 0px 0px 16px;
+}
+.gauge.min-scaled {
+  transform: scale(0.5);
+}
+
+.gauge-center {
+  content: '';
+  color: #fff;
+  width: 90%;
+  height: 90%;
+  background: #313131;
+  border-radius: 100px 100px 0 0!important;
+  position: absolute;
+  box-shadow: 0 -13px 15px -10px rgba(0, 0, 0, 0.28);
+  right: 5%;
+  bottom: 0;
+  color: #fff;
+  z-index:10;
+}
+
+.gauge-center .label, .gauge-center .number {display:block; width: 100%; text-align: center; border:0!important;}
+.gauge-center .label {font-size:1.65em; margin:0.30em 0 0.3em 0;}
+.gauge-center .number {font-size:1.25em; margin: -3px 0 0 0;}
+
+.needle {
+  width: 70px;
+  height: 4px;
+  background: #ffffff65;
+  border-bottom-left-radius: 100%!important;
+  border-bottom-right-radius: 5px!important;
+  border-top-left-radius: 100%!important;
+  border-top-right-radius: 5px!important;
+  position: absolute;
+  bottom: 0px;
+  left: 6px;
+  transform-origin: 100% 4px;
+  transform: rotate(0deg);
+  /* box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.38); */
+  display:none;
+  z-index:11;
+}
+
+.four.rischio1 .needle {animation: fourspeed1 2s 1 both; animation-delay: 1s; display:block;}
+.four.rischio2 .needle {animation: fourspeed2 2s 1 both; animation-delay: 1s; display:block;}
+.four.rischio3 .needle {animation: fourspeed3 2s 1 both; animation-delay: 1s; display:block;}
+.four.rischio4 .needle {animation: fourspeed4 2s 1 both; animation-delay: 1s; display:block;}
+
+.slice-colors {height:100%;}
+
+.slice-colors .st {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;  
+}
+
+
+.four .slice-colors .st.slice-item:nth-child(2) {
+  left: -15%;
+  border-top: 50px #f1c40f solid;
+  border-right: 50px #f1c40f solid;
+  background-color:#1eaa59;
+  overflow: scroll;
+}
+
+.four .slice-colors .st.slice-item:nth-child(4) {
+  left:50%;
+  border-bottom: 50px #E84C3D solid;
+  border-right: 50px #E84C3D solid;
+  background-color:#e67e22;
+}
+
+
+@keyframes fourspeed1 {
+	0% {transform: rotate(0);}
+  100% {transform: rotate(16deg);}
+}
+
+@keyframes fourspeed2 {
+	0% {transform: rotate(0);}
+  100% {transform: rotate(65deg);}
+}
+
+@keyframes fourspeed3 {
+	0% {transform: rotate(0);}
+  100% {transform: rotate(115deg);}
+}
+
+@keyframes fourspeed4 {
+	0% {transform: rotate(0);}
+  100% {transform: rotate(164deg);}
+}
+
+/* wind speed meter */
+.meter {
+  background-color: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  width: 130px;
+  margin: -100px 0px 0px 26px;
+}
+#needle {
+  position: absolute;
+  left: 42.5%;
+  top: 33%;
+  width: 20px;
+  height: 60px;
+  transform-origin: 0% 50px;
+  transform: rotate(0deg);
+}
+
+svg {
+  margin: auto;
+  max-width: 100%;
+}
+
+.meter h3 {
+  display: block;
+  text-align: center;
+  margin-top: -130px;
+  font-family: Arial;
+} 
+
+/* MAP */
+.mapbc{
+  width: 1010px;
+  height: 630px;
+  position: absolute;
+  background-color: #313131;
+  margin: 85px 0px 0px 80px;
+  z-index: 12;
+  border-radius: 20px;
+
+}
+.mapbc .map{
+  width: 990px;
+  height: 610px;
+  /* position: absolute; */
+  background-color: #1eaa59;
+  margin: 10px 0px 0px 10px;
+  border-radius: 20px;
+}
+
+/* map pop up */
+.popup-content {
+  text-align: center;
+  font-size: 14px;
+  margin: 0%;
+  padding: 0%;
+}
+
+.popup-content b {
+  font-size: 16px;
+  margin: 0%;
+  padding: 0%;
+}
+.popup-content span {
+  font-size: 20px;
+  margin: 0%;
+  padding: 0%;
+}
+
+/* .mapbc {
+  visibility: hidden; 
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease, visibility 0.5s ease;
+}
+.mapbc-visible {
+  visibility: visible; 
+  width: 1010px;
+  height: 630px;
+  position: absolute;
+  background-color: #313131;
+  margin: 85px 0px 0px 80px;
+  z-index: 12;
+  border-radius: 20px;
+} */
+
+.mapbc {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease, visibility 0.5s ease;
+  width: 1010px;
+  position: absolute;
+  background-color: #313131;
+  margin: 85px 0px 0px 80px;
+  z-index: 12;
+  border-radius: 20px;
+}
+.mapbc-visible {
+  visibility: visible;
+  height: 630px;
+}
+.map {
+  width: 990px;
+  height: 610px;
+  background-color: #1eaa59;
+  margin: 10px 0px 0px 10px;
+  border-radius: 20px;
+}
+
+
+/* calendar css */
+
+.calendar {
+  background-color: #313131;
+  width: 1010px;
+  height: 0px;
+  border-radius: 20px;
+  margin: 85px 0px 0px 80px;
+  position: absolute;
+  z-index: 12;
+  visibility: hidden;
+  transition: height 0.5s ease, visibility 0.5s ease;
+}
+
+.calendar-visible {
+  visibility: visible;
+  height: 630px;
+}
+
+.calendar-base{
+  height: 0px; /* Start with height 0 */
+  overflow: hidden;
+  transition: height 0.5s ease; /* Transition height over the same duration */
+}
+.calendar-left{
+  height: 0px; /* Start with height 0 */
+  overflow: hidden;
+  transition: height 0.5s ease; /* Transition height over the same duration */
+}
+
+.calendar-visible .calendar-base {
+  height: 600px; /* Expand to full height when visible */
+}
+.calendar-visible .calendar-left {
+  height: 600px; /* Expand to full height when visible */
+}
+
+.calendar-base {
+  width: 990px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: -1;
+  color: black;
+  margin: 15px 0px 0px 10px;
+}
+
+.calendar-left {
+  width: 300px;
+  border-radius: 20px 0px 0px 20px;
+  background: linear-gradient(180deg, #20383E 0%, #5293A3 0%, #476A73 44%, #3D6974 100%);
+  position: relative;
+  /* z-index: 1; */
+  /* margin: 0px 0px 0px 10px; */
+  color: white;
+  margin: -524px 0px 0px 0px;
+
+}
+
+.year {
+  color: #E8E8E8;
+  font-size: 30px;
+  float: right;
+  position: relative;
+  right: 75px;
+  top: 20px;
+  font-weight: bold;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 10px solid #E8E8E8;
+  border-bottom: 5px solid transparent;
+  float: right;
+  position: relative;
+  right: 90px;
+  top: 36px;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid #E8E8E8;
+  border-bottom: 5px solid transparent;
+  float: right;
+  position: relative;
+  left: 25px;
+  top: 36px;
+}
+.triangle-left:hover{
+  border-right: 10px solid#2ECC71;
+}
+.triangle-right:hover{
+  border-left: 10px solid#2ECC71;
+}
+
+.month-color {
+  color: #313131;
+  font-weight: 600;
+}
+.month-hover:hover{
+  color:#27e879 ;
+}
+
+.months {
+  color: #AAAAAA;
+  position: relative;
+  left: 385px;
+  top: 90px;
+  word-spacing: 12px;
+}
+
+.month-line {
+  border-color: #E8E8E8;
+  position: relative;
+  top: 85px;
+  width: 57%;
+  left: 178px;
+}
+
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 2px;
+  column-gap: 24px;
+  text-align: center; /* Center the text in each grid cell */
+  color: #AAAAAA;
+  position: relative;
+  font-size: 15px;
+  left: 395px;
+  top: 84px;
+  font-weight: 400;
+  width: 510px;
+}
+
+.num-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 26px;
+  column-gap: 25px;
+  margin-top: 100px;
+  margin-left: 400px;
+  margin-right: 80px;
+}
+
+.num-dates span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+}
+
+.active-day {
+  background-color: #313131;
+  color: white;
+  border-radius: 50%;
+}
+
+.grey {
+  color: #AAAAB1;
+}
+
+
+.white {
+  color: white;
+}
+
+.event-indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ff0062;
+  position: relative;
+  top: 304px;
+  left: 487px;
+}
+
+.two {
+  position: relative;
+  top: 168px;
+  left: 535px;
+}
+
+.grey {
+  color: #AAAAB1;
+}
+
+/* .calendar-left {
+  width: 300px;
+  height: 600px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: #2ECC71;
+  position: relative;
+  z-index: -1;
+  margin: -600px 0px 0px 10px;
+  color: white;
+} */
+
+.hamburger {
+  position: relative;
+  top: 25px;
+  left: 25px;
+}
+
+.burger-line:hover, .hamburger:hover{
+  background-color:#27e879 !important;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 15%;
+  margin-bottom: 3px;
+}
+
+.num-date {
+  font-size: 150px;
+  width: 50%;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.day {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  font-size: 30px;
+  position: relative;
+  bottom: 10px;
+}
+
+.current-events {
+  font-size: 15px;
+  position: relative;
+  margin-left: 25px;
+  bottom: 0px;
+}
+
+.posts {
+  text-decoration: underline dotted;
+}
+.posts:hover{
+  color:#27e879 !important;
+}
+
+.create-event {
+  font-size: 18px;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+.event-line {
+  width: 90%;
+}
+
+.add-event {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  border-radius: 50%;
+  border: solid white 2px;
+  position: relative;
+  bottom: 42px;
+  left: 260px;
+}
+
+.add {
+  font-size: 30px;
+  position: relative;
+  left: 4px;
+  bottom: 7px;
+
+}
+
+.add:hover, .create-event:hover, .add-event:hover{
+  color:#27e879 !important;
+  border-color: #27e879 !important;
+}
+
+
+/* log in / log out */
+
+.Loginlogout {
+  width: 155px;
+  height: 50px;
+  left: 935px;
+  top: 25px;
+  position: absolute;
+  background: linear-gradient(0deg, #3A3A3A 0%, #3A3A3A 100%), linear-gradient(0deg, #313131 0%, #313131 100%);
+  border-radius: 15px;
+}
+
+.Logo {
+  width: 43px;
+  height: 43px;
+  left: 7px;
+  top: 3px;
+  position: absolute;
+  background: white;
+  border-radius: 25px;
+}
+
+.Loginlogout p{
+  color: white;
+  margin: 12px 65px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.signINsignUP {
+  background-color: #313131;
+  width: 0; /* Start with width 0 for animation */
+  height: 0; /* Start with height 0 for animation */
+  border-radius: 20px;
+  margin: 85px 0px 0px 80px;
+  position: absolute;
+  z-index: 14;
+  overflow: hidden; /* Hide overflow to ensure smooth animation */
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.signINsignUP.expanded {
+  width: 1010px; /* Expanded width */
+  height: 630px; /* Expanded height */
+}
+
+.signINsignUP.open {
+  height: 630px; /* Target height for the transition */
+  visibility: visible;
+}
+
+.signINsignUP h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+.signINsignUP h2 {
+	text-align: center;
+}
+
+.signINsignUP p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+.signINsignUP span {
+	font-size: 12px;
+}
+
+.signINsignUP a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.signINsignUP button {
+	border-radius: 20px;
+	border: 1px solid #545454;
+	background-color: #343434;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.signINsignUP button:active {
+	transform: scale(0.95);
+}
+
+.signINsignUP button:focus {
+	outline: none;
+}
+
+.signINsignUP button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.signINsignUP form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+.signINsignUP input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.signINsignUP .container {
+  margin: 80px 0px 0px 120px;
+	background-color: #fff;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+.signINsignUP .form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.signINsignUP .sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.signINsignUP .container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.signINsignUP .sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.signINsignUP .container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.signINsignUP .overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.signINsignUP .container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.signINsignUP .overlay {
+  background: linear-gradient(180deg, #20383E 0%, #5293A3 0%, #476A73 44%, #3D6974 100%);
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.signINsignUP .container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.signINsignUP .overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 0px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.signINsignUP .overlay-left {
+	transform: translateX(-20%);
+}
+
+.signINsignUP .container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.signINsignUP .overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.signINsignUP .container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.signINsignUP .social-container {
+	margin: 20px 0;
+}
+
+.signINsignUP .social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.signINsignUP footer {
+    background-color: #222;
+    color: #bcbcbc;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
+
+.signINsignUP footer .taksin{
+  color: rgb(225, 225, 225);
+}

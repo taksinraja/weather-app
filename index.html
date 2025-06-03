@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- map -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="Container">
+
+      <div class="signINsignUP">
+        <div class="container" id="container">
+          <div class="form-container sign-up-container">
+            <form action="#">
+              <h1>Create Account</h1>
+              <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <button>Sign Up</button>
+            </form>
+          </div>
+          <div class="form-container sign-in-container">
+            <form action="#">
+              <h1>Sign in</h1>
+              <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <span>or use your account</span>
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <a href="#">Forgot your password?</a>
+              <button>Sign In</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <p>
+            Created with <i class="fa fa-heart"></i> by
+            <a target="_blank" href="https://taksinraja.netlify.app" class="taksin">Taksin</a>
+            - Checkout my portfolio for more projects like this!
+            <a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+          </p>
+        </footer>
+      </div>
+      <div class="calendar">
+        <div class="container">
+
+          <div class="calendar-base">
+        
+            <div class="year"></div>
+            <!-- year -->
+        
+            <div class="triangle-left"></div>
+            <!--triangle -->
+            <div class="triangle-right"></div>
+            <!--  triangle -->
+        
+            <div class="months">
+              <span id="jan" class="month-hover">Jan</span>
+              <span id="feb" class="month-hover">Feb</span> 
+              <span id="mar" class="month-hover">Mar</span>
+              <span id="apr" class="month-hover">April</span>
+              <span id="may" class="month-hover">May</span>
+              <span id="jun" class="month-hover">Jun</span>
+              <span id="jul" class="month-hover">July</span> 
+              <span id="aug" class="month-hover">Aug</span> 
+              <span id="sep" class="month-hover">Sep</span> 
+              <span id="oct" class="month-hover">Oct</span> 
+              <span id="nov" class="month-hover">Nov</span> 
+              <span id="dec" class="month-hover">Dec</span>
+            </div><!-- months -->
+            <hr class="month-line" />
+        
+            <!-- <div class="days">SUN MON TUE WED THU FRI SAT</div> -->
+            <div class="days">
+              <span>SUN</span>
+              <span>MON</span>
+              <span>TUE</span>
+              <span>WED</span>
+              <span>THU</span>
+              <span>FRI</span>
+              <span>SAT</span>
+            </div>
+            <!-- days -->
+        
+            <div class="num-dates">
+        
+
+            </div>
+            <!-- num-dates -->
+            <!-- <div class="event-indicator"></div> -->
+            <!-- event-indicator -->
+            <div class="active-day"></div>
+            <!-- active-day -->
+            <!-- <div class="event-indicator two"></div> -->
+            <!-- event-indicator -->
+
+            <div class="calendar-left">
+        
+              <div class="hamburger">
+                <div class="burger-line"></div>
+                <!-- burger-line -->
+                <div class="burger-line"></div>
+                <!-- burger-line -->
+                <div class="burger-line"></div>
+                <!-- burger-line -->
+              </div>
+              <!-- hamburger -->
+          
+          
+              <div class="num-date">27</div>
+              <!--num-date -->
+              <div class="day">THURSDAY</div>
+              <!--day -->
+              <div class="current-events">Current Events
+                <br/>
+                <ul>
+                  <li>Day 09 Daily CSS Image</li>
+                </ul>
+                <span class="posts">See post events</span></div>
+              <!--current-events -->
+          
+              <div class="create-event">Create an Event</div>
+              <!-- create-event -->
+              <hr class="event-line" />
+              <div class="add-event"><span class="add">+</span></div>
+              <!-- add-event -->
+          
+            </div>
+        
+          </div>
+          <!-- calendar-base -->
+
+          <!-- calendar-left -->
+        
+        </div>
+        <!-- container -->
+        
+      </div>
+
+      <!-- map html -->
+      <div class="mapbc" id="mapbc">
+        <div class="map" id="map"></div>
+      </div>
+
+      <!-- sidebar -->
+      <div class="Sidebar">
+        <div class="Overicon">
+            <div class="Rectangle174"></div>
+            <div class="Ellipse54"></div>
+        </div>
+        <div class="SidebarIcons">
+          <a href="#home" class="icon-link" data-target="home"><i class="fa fa-fw fa-home"></i></a>
+          <a href="#map" class="icon-link" id="mapIcon" data-target="map"><i class="fa fa-fw fa-map"></i></a>
+          <a href="#calendar" class="icon-link" data-target="calendar"><i class="fa fa-fw fa-calendar"></i></a>
+          <a href="#cog" class="icon-link" data-target="contact"><i class="fa fa-fw fa-cog"></i></a>
+        </div>
+        <div id="home" class="section section-visible"></div>
+        <div class="mapbc" id="mapbc">
+          <div class="map" id="map"></div>
+        </div>
+        <div id="calendar" class="section"></div>
+        <div id="settings" class="section"></div>
+
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+      </div>
+        <div class="Toggel">
+          <!-- <div class="Rectangle158">
+            <div class="Rectangle159">
+              <div class="Vector" style="width: 9px; height: 9px; left: 29px; top: 6px; position: absolute; border: 1px black solid; z-index: 1;"></div>
+            </div>
+          </div> -->
+          <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#FFD43B" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+              <svg class="svgsun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#FFD43B" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+              <span class="ball"></span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="Searchbar" style="width: 540px; height: 50px; left: 80px; top: 25px; position: absolute; background: #313131; border-radius: 15px">
+          <div class="Searchtext">
+            <input id="cityInput" type="text" placeholder="Search City">
+          </div>
+          <div id="searchButton" class="Searchicon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+          </div>
+        </div>
+        <div class="Loginlogout">
+          <p id="loginButton">Login</p>
+          <div class="Logo"></div>
+        </div>
+        <div class="Todayandhigilight">
+          <p>Today  Highlight</p>
+          <div class="AQI">
+            <p>Air Quality</p>
+            <h1>45</h1>
+            <h2>Good</h2>
+          </div>
+          <div class="UvRay">
+            <p>UV Index</p>
+            <div class="gauge-wrapper">
+              <div class="gauge four rischio3">
+                <div class="slice-colors">
+                  <div class="st slice-item"></div>
+                  <div class="st slice-item"></div>
+                  <div class="st slice-item"></div>
+                  <div class="st slice-item"></div>
+                </div>
+                <div class="needle"></div>
+                <div class="gauge-center">
+                  <div class="label">6</div>
+                  <div class="number">HIGH</div>
+                </div>    
+              </div>
+            </div>
+          </div>
+          
+          <div class="Humidity">
+            <p>Humidity</p>
+            <img src="images/dayrainy.png" alt="">
+            <h2>45%</h2>
+            <h3>Stutas</h3>
+            <h4>Good Quality</h4>
+          </div>
+          <div class="WindSpeed">
+            <p>Wind Stutas</p>
+            <!-- <img src="images/rain.png" alt=""> -->
+            <div class="">
+              <div class="meter">
+                <svg width="327" height="317" id="meter" viewBox="0 0 327 317" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="14" y="9" width="301" height="202" fill="#D7D7D7" />
+                  <path d="M239.772 49.4556C244.43 43.0045 253.464 41.4512 259.516 46.6171C270.965 56.3903 280.907 67.765 289.025 80.3783C293.396 87.1699 290.473 96.0346 283.259 99.665L211.127 135.96C197.546 142.794 183.924 126.811 192.823 114.485L239.772 49.4556Z" fill="#EE952C" />
+                  <path d="M25.8782 210.701C18.3813 213.426 10.0168 209.605 7.95331 201.9C0.679942 174.742 1.07306 146.032 9.23397 118.929C18.7845 87.2122 38.461 59.3983 65.3263 39.6394C92.1916 19.8805 124.805 9.23643 158.297 9.29607C186.857 9.34693 214.75 17.1783 238.961 31.7942C245.884 35.9735 247.169 45.232 242.28 51.6735L197.01 111.32C192.2 117.657 183.205 118.709 175.744 115.947C170.142 113.874 164.176 112.787 158.117 112.776C147.22 112.757 136.61 116.219 127.869 122.648C119.129 129.076 112.727 138.125 109.62 148.444C107.932 154.051 107.265 159.869 107.612 165.634C108.096 173.685 104.452 182.148 96.8709 184.903L25.8782 210.701Z" fill="url(#paint0_linear_498_1159)" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H326.285V221.242H0V0ZM34.6883 206.881C27.2032 209.764 18.7216 206.046 16.606 198.308C11.7205 180.441 10.3127 161.752 12.5111 143.268C15.2828 119.964 23.7028 97.6888 37.0397 78.3781C50.3766 59.0674 68.2269 43.3052 89.0398 32.461C109.853 21.6167 132.999 16.0184 156.467 16.1524C179.935 16.2863 203.016 22.1486 223.703 33.2297C244.391 44.3109 262.06 60.2759 275.176 79.7376C288.291 99.1993 296.457 121.569 298.962 144.904C300.949 163.412 299.328 182.082 294.239 199.893C292.035 207.606 283.512 211.228 276.06 208.259L239.45 193.676C231.999 190.707 228.516 182.258 230.009 174.377C231.388 167.098 231.695 159.63 230.899 152.212C229.583 139.959 225.296 128.213 218.409 117.994C211.522 107.774 202.244 99.3914 191.381 93.5728C180.518 87.7542 168.399 84.676 156.076 84.6057C143.753 84.5353 131.599 87.475 120.671 93.1692C109.742 98.8634 100.369 107.14 93.3662 117.28C86.3631 127.42 81.9419 139.116 80.4865 151.353C79.6053 158.762 79.8275 166.233 81.123 173.527C82.5256 181.425 78.9471 189.834 71.462 192.717L34.6883 206.881ZM96.5323 176.472C97.1844 178.411 99.3523 179.328 101.25 178.565C103.148 177.802 104.056 175.648 103.418 173.704C100.905 166.041 100.05 157.916 100.928 149.87C101.939 140.596 105.223 131.713 110.488 124.011C115.752 116.308 122.835 110.022 131.109 105.711C139.383 101.399 148.593 99.1946 157.922 99.2925C167.252 99.3904 176.413 101.788 184.595 106.272C192.777 110.756 199.726 117.189 204.828 125C209.93 132.812 213.026 141.761 213.843 151.055C214.552 159.117 213.526 167.223 210.853 174.832C210.175 176.761 211.037 178.934 212.919 179.737C214.8 180.539 216.987 179.668 217.679 177.743C220.822 169.009 222.038 159.682 221.222 150.407C220.298 139.899 216.798 129.781 211.03 120.95C205.262 112.118 197.405 104.846 188.155 99.7761C178.905 94.7064 168.548 91.9962 158 91.8855C147.452 91.7748 137.04 94.2671 127.686 99.1416C118.332 104.016 110.324 111.122 104.372 119.831C98.4202 128.539 94.7078 138.581 93.5639 149.067C92.554 158.324 93.5731 167.674 96.5323 176.472Z" fill="#313131" />
+                  <defs>
+                    <linearGradient id="paint0_linear_498_1159" x1="364.347" y1="130.909" x2="-48.8075" y2="355.096" gradientUnits="userSpaceOnUse">
+                      <stop offset="0.0677083" stop-color="#1663D6" />
+                      <stop offset="0.786458" stop-color="#01C738" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <svg width="30" height="144" id="needle" viewBox="0 0 30 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="15.2089" cy="128.608" r="10.9086" fill="white" stroke="#01C738" stroke-width="7" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3486 0.920656L25.3277 127.679L25.3166 127.679C25.322 127.833 25.3239 127.988 25.322 128.144C25.2587 133.535 20.8377 137.853 15.4474 137.79C10.0571 137.726 5.73875 133.305 5.80203 127.915C5.80386 127.759 5.80934 127.604 5.81838 127.45L5.80766 127.45L17.3486 0.920656ZM19.2238 134.487C22.4036 132.316 23.2212 127.978 21.0498 124.798C18.8784 121.618 14.5404 120.801 11.3606 122.972C8.18076 125.144 7.36323 129.482 9.53459 132.661C11.706 135.841 16.044 136.659 19.2238 134.487Z" fill="url(#paint0_linear_498_1180)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_498_1180" x1="8.57715" y1="129.079" x2="18.8019" y2="129.199" gradientUnits="userSpaceOnUse">
+                      <stop offset="0.6874" stop-color="#3F4142" />
+                      <stop offset="0.6875" stop-color="#2C2C2C" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <h2 id="windSpeedValue">km/h</h2>
+            <h3 id="windTime">4:30 pm</h3>
+          </div>
+        </div>
+        <div class="Main">
+          <div class="Datas">
+            <div class="CityName_back">
+              <p class="Cityname"></p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+            </div>
+            <div class="Fc" style="width: 68px; height: 31px; left: 452px; top: 0px; position: absolute">
+              
+              <div class="toggle-button-cover">
+                <div id="button-3" class="button r">
+                  <input class="checkbox" type="checkbox">
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+              </div>
+            </div>
+            <div class="Dayandyear" style="width: 146.77px; height: 55px; left: 0px; top: 64px; position: absolute;">
+              <h2>Monday</h2>
+              <p>2 Nov 2024</p>
+            </div>
+            <div class="Temarature" style="width: 146.77px; height: 55px; left: 0px; top: 146px; position: absolute;">
+              <h1>24°C</h1>
+            </div>
+            <div class="Icon" style="width: 193.42px; height: 158px; left: 326.58px; top: 43px; position: absolute;">
+              <img src="cloud.png" alt="">
+            </div>
+            <div class="Highandlow">
+              <p>High:27° Low:18°</p>
+            </div>
+            <div class="Condition" style="width: 114.69px; height: 54px; left: 405.31px; top: 211px; position: absolute; ">
+              <h2>Cloudy</h2>
+              <p>Feels like 26°</p>
+            </div>
+            <div class="rotate-img">
+              <img src="cloud copy.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="AdditionalInfoBack">
+          <div class="TodayContainer">
+            <div class="TodayWeek" style="color: white;">
+              Today / Week
+            </div>
+
+            <div class="Nextday">
+              <p>Tomorow</p>
+              <samp>Thunder Storm</samp>
+              <h2>14°C</h2>
+            </div>
+            <div class="CloudIcon">
+              <img src="images/storm.png" alt="">
+            </div>
+            <div class="backOFssl"></div>
+            <div class="Sunrise">
+              <p>Sunrise</p>
+              <h2>6:45</h2> 
+            </div>
+            <div class="Sunset" >
+              <p>Sunset</p>
+              <h2>6:45</h2> 
+            </div>
+            <div class="LengthOfDay">
+              <p>Length of day</p>
+              <h2>10h 23m</h2>
+            </div>
+            <div class="DaysForecast" id="forecast">
+          </div>
+          </div>
+        </div>
+        <div class="OtherCities">
+          <div class="OtherCityText">
+            <p>Other Cities</p>
+          </div>
+          <div class="Showall">
+            <p>Show All</p>
+          </div>
+          <div class="City1">
+            <h1>35°</h1>
+            <p>H 23° L 20°</p>
+            <h2 style="color: white; margin: 16px 0px 0px 10px; font-size: 20px">Kolkata</h2>
+            <div class="Icon">
+              <img src="images/dayclear.png" alt="">
+            </div>
+          </div>
+          <div class="City2">
+            <h1>22°</h1>
+            <p>H 24° L 20°</p>
+            <h2 style="color: white; margin: 16px 0px 0px 10px; font-size: 20px">Mumbai</h2>
+            <div class="Icon">
+              <img src="images/daythnderstorm.png" alt="">
+            </div>
+          </div>
+          <div class="City3">
+            <h1>28°</h1>
+            <p>H 33° L 25°</p>
+            <h2 style="color: white; margin: 16px 0px 0px 10px; font-size: 20px">New Delhi</h2>
+            <div class="Icon">
+              <img src="images/daycloudy.png" alt="">
+            </div>
+          </div>
+          <div class="City4">
+            <h1>14°</h1>
+            <p>H 15° L 8°</p>
+            <h2 style="color: white; margin: 16px 0px 0px 10px; font-size: 20px">Srinagar</h2>
+            <div class="Icon">
+              <img src="images/dayrainy.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+      <script src="calender.js"></script>
+</body>
+</html>
